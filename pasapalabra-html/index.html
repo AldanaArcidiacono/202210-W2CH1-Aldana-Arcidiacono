@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aldana Arcidiacono">
+    <link rel="stylesheet" href="index.css">
+    <title>Pasapalabra-DOM</title>
+</head>
+<body>
+    <header>Juego Pasapalabra🎡📚</header>
+    <main class="pasapalabra">
+            <section class="pasapalabra__rules section__message">
+                <div class="rules__message pink__div">
+                    <p class="message__for-user" id="starting-game-message">A continuación se iniciará el pasapalabra, pero antes te contaremos cómo funciona:<br><br> 
+                        •Cada ronda, se te hará una pregunta con cada una de las letras del abecedario.<br>Para intoducir tu respuesta, haz click en <strong>"enter"</strong> o en el <strong>botón "responder"</strong>.<br><br>                
+                        •Si no sabes alguna de ellas, puedes clikear la <strong>"barra espaciadora"</strong> o el <strong>boton "pasapalabra"</strong> y responderla en la siguiente ronda.<br><br>                
+                        •Tendrás 2 minutos para completar el juego.<br><br>                
+                        •Si deseas salir, puedes clikear el <strong>botón de "salir"</strong> o la tecla <strong>"escape"</strong>.<br><br>                
+                        Suerte!🎡🍀</p>
+                </div>
+                <button class="message__button green__button" id="start-button">Iniciar</button>
+            </section>
+
+            <section class="pasapalabra__game">
+                <div class="game__container">
+                    <div class="game__letterCircle" id="a"><p class="letterCircle__letter">A</p></div>
+                    <div class="game__letterCircle" id="b"><p class="letterCircle__letter">B</p></div>
+                    <div class="game__letterCircle" id="c"><p class="letterCircle__letter">C</p></div>
+                    <div class="game__letterCircle" id="d"><p class="letterCircle__letter">D</p></div>
+                    <div class="game__letterCircle" id="e"><p class="letterCircle__letter">E</p></div>
+                    <div class="game__letterCircle" id="f"><p class="letterCircle__letter">F</p></div>
+                    <div class="game__letterCircle" id="g"><p class="letterCircle__letter">G</p></div>
+                    <div class="game__letterCircle" id="h"><p class="letterCircle__letter">H</p></div>
+                    <div class="game__letterCircle" id="i"><p class="letterCircle__letter">I</p></div>
+                    <div class="game__letterCircle" id="j"><p class="letterCircle__letter">J</p></div>
+                    <div class="game__letterCircle" id="k"><p class="letterCircle__letter">K</p></div>
+                    <div class="game__letterCircle" id="l"><p class="letterCircle__letter">L</p></div>
+                    <div class="game__letterCircle" id="m"><p class="letterCircle__letter">M</p></div>
+                    <div class="game__letterCircle" id="n"><p class="letterCircle__letter">N</p></div>
+                    <div class="game__letterCircle" id="ñ"><p class="letterCircle__letter">Ñ</p></div>
+                    <div class="game__letterCircle" id="o"><p class="letterCircle__letter">O</p></div>
+                    <div class="game__letterCircle" id="p"><p class="letterCircle__letter">P</p></div>
+                    <div class="game__letterCircle" id="q"><p class="letterCircle__letter">Q</p></div>
+                    <div class="game__letterCircle" id="r"><p class="letterCircle__letter">R</p></div>
+                    <div class="game__letterCircle" id="s"><p class="letterCircle__letter">S</p></div>
+                    <div class="game__letterCircle" id="t"><p class="letterCircle__letter">T</p></div>
+                    <div class="game__letterCircle" id="u"><p class="letterCircle__letter">U</p></div>
+                    <div class="game__letterCircle" id="v"><p class="letterCircle__letter">V</p></div>
+                    <div class="game__letterCircle" id="w"><p class="letterCircle__letter">W</p></div>
+                    <div class="game__letterCircle" id="x"><p class="letterCircle__letter">X</p></div>
+                    <div class="game__letterCircle" id="y"><p class="letterCircle__letter">Y</p></div>
+                    <div class="game__letterCircle" id="z"><p class="letterCircle__letter">Z</p></div>
+                </div>
+                <div class="game__actions">
+                    <div class="actions__question">
+                        <p id="word-to-guess">Aqui iran las adivinanzas</p>
+                    </div>
+                    
+                    <input autofocus class="actions__input" type="text" name="user-answer" placeholder="Introduce tu respuesta...">
+
+                    <div class="actions__buttons">
+                        <button class="buttons__pasapalabra" id="pasapalabra-button">Pasapalabra</button>
+                        <button class="buttons__user-answer  green__button" id="answer-button">Responder</button>
+                    </div>
+                </div>
+                <div class="game__exit">
+                    <div class="exit__elements" id="timer">120</div>
+                    <button class="exit__elements" id="exit-button">Salir</button>
+                </div>
+            </section>
+            
+
+            <section class="pasapalabra__scoring section__message" id="winning">
+                <div class="scoring__message-user pink__div">
+                    <p  class="dinamic-message">Felicidades! Has terminado el juego!🤗🎡📚</p><br>
+                    <p class="points-message">
+                    Has respondido ${correctAnswer} palabras correctamente y te equivocaste en ${wrongAnswer}<br><br>
+                    Introduce tu nombre para guardar tu score en nuestro ranking!</p>
+                </div>
+                
+                <input class="scoring__user-name" type="text" name="user-name" placeholder="Ingresa tu nombre...">
+                
+                <div class="scoring__butttons">
+                    <button class="scoring__butttons__send green__button" id="submit-button">Enviar</button>
+                </div>
+            </section>
+
+            <section class="pasapalabra__users-ranking section__message">
+                <div class="users-ranking__last-message pink__div">
+                    <p class="last-message__for-user" id="scoring">Este es el ranking de nuestros jugadores:<br>
+                        Donna : ${puntos}<br>
+                        Clara : ${puntos}<br>
+                        Amy : ${puntos}<br>
+                        ${Usuario} : ${puntos} <br>
+                        Rory : ${puntos}<br>
+                        Jack : ${puntos}</p>
+                    <p class="last-message__for-user" id="play-again">¿Deseas jugar de nuevo?🤩⬇</p>
+                </div>
+                    
+                <div class="users-ranking__buttons">
+                    <button class="buttons__play  green__button" id="play-again-button">Jugar de nuevo</button>
+                </div>
+            </section>
+    </main>
+    <footer><h3>Made with love ❤ by Aldana Arcidiacono</h3></footer>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: -webkit-fill-available;
+    height: 3rem;
+    left: 0px;
+    top: 0px;
+    background: #FFD9D9;
+    text-align: -webkit-center;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #000000;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d4d4d4b0;
+}
+
+.section__message {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 55rem;
+    z-index: 1;
+    /* background-color: #ca467bb0; */
+}
+
+.pink__div {
+    padding: 1.5rem;
+    background: #EDBCD0;
+    border: 1px solid #424040;
+    border-radius: 0.75rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #000000;
+}
+
+.green__button {
+    background: #D7EDBC;
+    border: 0.5px solid #424040;
+    border-radius: 0.75rem;
+    width: 15rem;
+    height: 3.5rem;
+    margin: 1rem;
+    line-height: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    -webkit-text-stroke: 1px #424040;
+    color: #FFFFFF;
+}
+
+.pasapalabra__rules {
+    display: flex;
+}
+
+.rules__message {
+    width: 61rem;
+    height: 30rem;
+}
+
+.message__button {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 2.4rem;
+}
+
+.pasapalabra__game {
+    width: 75rem;
+    height: 55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.game__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 27rem;
+}
+
+.game__letterCircle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: #EDBCD0;
+    border: 1px solid #424040;
+    border-radius: 24rem;
+}
+
+.letterCircle__letter {
+    -webkit-text-stroke: 1.2px #424040;
+    color: #FFFFFF;
+    font-size: 2.7rem;
+}
+
+.activeLetter {
+    border: 3px solid #424040;
+}
+
+#a {
+    transform: rotate(-90deg) translate(25em) rotate(90deg);
+}
+
+#b {
+    transform: rotate(-76.7deg) translate(25em) rotate(76.7deg);
+}
+
+#c {
+    transform: rotate(-63.4deg) translate(25em) rotate(63.4deg);
+}
+
+#d {
+    transform: rotate(-50.1deg) translate(25em) rotate(50.1deg);
+}
+
+#e {
+    transform: rotate(-36.8deg) translate(25em) rotate(36.8deg);
+}
+
+#f {
+    transform: rotate(-23.5deg) translate(25em) rotate(23.5deg);
+}
+
+#g {
+    transform: rotate(-10.2deg) translate(25em) rotate(10.2deg);
+}
+
+#h {
+    transform: rotate(3.1deg) translate(25em) rotate(-3.1deg);
+}
+
+#i {
+    transform: rotate(16.4deg) translate(25em) rotate(-16.4deg);
+}
+
+#j {
+    transform: rotate(29.7deg) translate(25em) rotate(-29.7deg);
+}
+
+#k {
+    transform: rotate(43deg) translate(25em) rotate(-43deg);
+}
+
+#l {
+    transform: rotate(56.3deg) translate(25em) rotate(-56.3deg);
+}
+
+#m {
+    transform: rotate(69.6deg) translate(25em) rotate(-69.6deg);
+}
+
+#n {
+    transform: rotate(82.9deg) translate(25em) rotate(-82.9deg);
+}
+
+#ñ {
+    transform: rotate(96.2deg) translate(25em) rotate(-96.2deg);
+}
+
+#o {
+    transform: rotate(109.5deg) translate(25em) rotate(-109.5deg);
+}
+
+#p {
+    transform: rotate(122.8deg) translate(25em) rotate(-122.8deg);
+}
+
+#q {
+    transform: rotate(136.1deg) translate(25em) rotate(-136.1deg);
+}
+
+#r {
+    transform: rotate(149.4deg) translate(25em) rotate(-149.4deg);
+}
+
+#s {
+    transform: rotate(162.7deg) translate(25em) rotate(-162.7deg);
+}
+
+#t {
+    transform: rotate(176deg) translate(25em) rotate(-176deg);
+}
+
+#u {
+    transform: rotate(189.3deg) translate(25em) rotate(-189.3deg);
+}
+
+#v {
+    transform: rotate(202.6deg) translate(25em) rotate(-202.6deg);
+}
+
+#w {
+    transform: rotate(215.9deg) translate(25em) rotate(-215.9deg);
+}
+
+#x {
+    transform: rotate(229.2deg) translate(25em) rotate(-229.2deg);
+}
+
+#y {
+    transform: rotate(242.5deg) translate(25em) rotate(-242.5deg);
+}
+
+#z {
+    transform: rotate(-103.3deg) translate(25em) rotate(103.3deg);
+}
+
+.game__actions {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    display: none;
+    z-index: 1;
+}
+
+.actions__question {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 35rem;
+    height: 17rem;
+    left: 29rem;
+    top: 21rem;
+    background: #EDBCD0;
+    border: 1px solid #424040;
+    border-radius: 0.75rem;
+    cursor: default;
+}
+
+#word-to-guess {
+    width: 33rem;
+    height: 9rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 1rem;
+    color: #2F2E2E;
+}
+
+input {
+    width: 34rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+    background: #F8E9EF;
+    border: 0.5px solid #424040;
+    border-radius: 9px;
+}
+
+.actions__input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.actions__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30rem;
+}
+
+.buttons__pasapalabra {
+    background: #F8D6A3;
+    border: 1px solid #424040;
+    border-radius: 12px;
+    width: 13.5rem;
+    height: 3.5rem;
+    margin: 0rem 0.5rem;
+    line-height: 52px;
+    font-size: 35px;
+    font-weight: 600;
+    -webkit-text-stroke: 1px #424040;
+    color: #FFFFFF;
+}
+
+
+.game__exit {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 40rem;
+}
+
+#timer {
+    width: 9rem;
+    height: 9rem;
+    background: #EDBCD0;
+    border: 1px solid #424040;
+    margin-left: 5rem;
+    border-radius: 5rem;
+    box-sizing: border-box;
+    -webkit-text-stroke: 1px #424040;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 9rem;
+    color: #FFFFFF;
+    cursor: default;
+}
+
+#exit-button {
+    width: 145px;
+    height: 60px;
+    margin-right: 6rem;
+    margin-bottom: 1rem;
+    background: #F89090;
+    border: 1px solid #424040;
+    border-radius: 0.75rem;
+    box-sizing: border-box;
+    -webkit-text-stroke: 1px #424040;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    color: #FFFFFF;
+    justify-content: center;
+    display: none;
+}
+
+.pasapalabra__scoring {
+    display: none;
+}
+
+.scoring__message-user {
+    width: 51rem;
+    height: 13rem;
+}
+
+.scoring__butttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 27rem;
+}
+
+.pasapalabra__users-ranking {
+    display: none;
+}
+
+.users-ranking__last-message {
+    width: 51rem;
+    height: 33rem;
+}
+
+.users-ranking__buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 1rem;
+    width: 27rem;
+}
+
+#play-again-button {
+    width: 23rem;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: -webkit-fill-available;
+    height: 2.7rem;
+    background: #FFD9D9;
+    text-align: -webkit-right;
+}
+
+h3 {
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 3rem;
+    color: #000000;
+}
