@@ -1,3 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: [header] 10% auto [footer] 10%;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+header {
+  grid-column-start: 1;
+  grid-column-end: 6 span;
+  background-color: #d4adcf;
+}
+
+.container--list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #856084;
+  grid-column-start: 1;
+  grid-column-end: 6 span;
+}
+.container--list .container--list__element {
+  grid-column-start: 2;
+  list-style: none;
+  gap: 1rem;
+  padding: 1rem;
+}
+.container--list .container--list__element a {
+  text-decoration: none;
+  color: #fcecc9;
+}
+
+footer {
+  grid-column: 1/6 span;
+  background-color: #fcecc9;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-end: 1rem;
+  color: #856084;
+}
 
 /*# sourceMappingURL=style.css.map */
